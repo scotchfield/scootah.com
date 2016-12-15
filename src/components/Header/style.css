@@ -1,0 +1,26 @@
+.header .details {
+  background-color: #dddddd;
+  padding: 8px;
+}
+.header .details h1 {
+  margin: 0;
+  padding: 4px;
+}
+.header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+.header ul li {
+  display: inline;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.header .navigation {
+  background-color: #eeeeee;
+  padding: 8px;
+}
+.header .navigation li.active {
+  font-weight: 700;
+}
