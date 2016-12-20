@@ -11,8 +11,9 @@ class Header extends Component {
         <div className='details'>
           <h1>Scott Grant</h1>
           <ul>
-            <li><a href='https://twitter.com/scotchfield'><FontAwesome name='twitter' />&nbsp;scotchfield</a></li>
-            <li><a href='https://github.com/scotchfield'><FontAwesome name='github' />&nbsp;scotchfield</a></li>
+            <li><a href='https://twitter.com/scotchfield' target='_blank'><FontAwesome name='twitter' />&nbsp;scotchfield</a></li>
+            <li><a href='https://github.com/scotchfield' target='_blank'><FontAwesome name='github' />&nbsp;scotchfield</a></li>
+            <li><a href='https://ca.linkedin.com/in/scotchfield' target='_blank'><FontAwesome name='linkedin' />&nbsp;scotchfield</a></li>
             <li><a href='mailto:swrittenb@gmail.com'><FontAwesome name='envelope' />&nbsp;swrittenb@gmail.com</a></li>
           </ul>
         </div>

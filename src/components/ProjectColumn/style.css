@@ -1,0 +1,13 @@
+.project-column {
+  padding: 16px;
+}
+.project-column:nth-child(2n) {
+  clear: both;
+}
+.project-column span.project-label {
+  background-color: #ccccff;
+  border: 0px;
+  border-radius: 4px;
+  margin: 4px 6px;
+  padding: 4px 12px;
+}

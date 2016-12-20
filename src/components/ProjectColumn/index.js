@@ -5,7 +5,7 @@ import './style.css';
 class ProjectColumn extends Component {
   render() {
     return (
-      <div className='project-column col-md-4 col-sm-6 col-xs-12'>
+      <div className='project-column col-sm-6 col-xs-12'>
         <h2>
           <a href={ this.props.detail.url }>
             { this.props.detail.title }
