@@ -1,5 +1,7 @@
 var constants = {
-  actions: {}
+  actions: {
+    getFoe: 'getFoe',
+  }
 }
 
 export default constants;

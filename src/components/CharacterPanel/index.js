@@ -5,7 +5,6 @@ import './style.css';
 class CharacterPanel extends Component {
   render() {
     let character = this.props.character;
-    console.log(character);
 
     let skills = Object.keys(character.skills).map((skill, i) => {
       return <span key={ i } className='skill'>{ skill }:&nbsp;{ character.skills[skill] }</span>

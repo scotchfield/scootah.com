@@ -3,13 +3,13 @@ import dispatcher from './dispatcher';
 import { EventEmitter } from 'events';
 
 import Character from './game/character';
-import World from './game/world';
+import Combat from './game/combat';
 
 const CHANGE_EVENT = 'change';
 
 var store = {
   character: Character.init(),
-  world: World.init()
+  combat: Combat.init()
 };
 
 class StoreClass extends EventEmitter {
@@ -29,8 +29,8 @@ class StoreClass extends EventEmitter {
     return store.character;
   }
 
-  getWorld() {
-    return store.world;
+  getCombat() {
+    return store.combat;
   }
 }
 

@@ -3,19 +3,19 @@ import React, { Component } from 'react';
 import Store from '../../store';
 
 import CharacterPanel from '../CharacterPanel';
-import WorldPanel from '../WorldPanel';
+import CombatPanel from '../CombatPanel';
 
 import './style.css';
 
 class Game extends Component {
   render() {
     let character = Store.getCharacter();
-    let world = Store.getWorld();
+    let combat = Store.getCombat();
 
     return (
       <div className='game navbar navbar-fixed-bottom'>
         <CharacterPanel character={ character } />
-        <WorldPanel world={ world } />
+        <CombatPanel combat={ combat } />
       </div>
     );
   }
