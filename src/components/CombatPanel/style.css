@@ -4,3 +4,6 @@
 .world-panel a {
   cursor: pointer;
 }
+.world-panel .foe-name, .world-panel .attacks, .world-panel .skill-name {
+  font-weight: 700;
+}

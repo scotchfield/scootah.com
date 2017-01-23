@@ -1,6 +1,7 @@
 var constants = {
   actions: {
-    getFoe: 'getFoe',
+    GET_FOE: 'GET_FOE',
+    RESET_FIGHT: 'RESET_FIGHT'
   }
 }
 

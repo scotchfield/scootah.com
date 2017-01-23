@@ -1,9 +1,10 @@
 import dispatcher from './dispatcher';
-// import constants from '../constants';
 import { EventEmitter } from 'events';
 
 import Character from './game/character';
 import Combat from './game/combat';
+
+import Constants from './constants';
 
 const CHANGE_EVENT = 'change';
 
@@ -36,11 +37,31 @@ class StoreClass extends EventEmitter {
 
 const Store = new StoreClass();
 
-// Here we register a callback for the dispatcher
-// and look for our various action types so we can
-// respond appropriately
+
 Store.dispatchToken = dispatcher.register(action => {
   switch(action.actionType) {
+    case Constants.actions.GET_FOE:
+      let character = Store.getCharacter();
+      let combat = Store.getCombat();
+
+      combat.state = 'combat';
+      combat.foe = Combat.getFoe();
+
+      // You always win, because to me, you're a winner.
+      let newSkill = Character.skills.getRandom();
+      combat.result = { skill: newSkill };
+      character.skills[newSkill] = character.skills[newSkill] ? character.skills[newSkill] + 1 : 1;
+
+      Store.emitChange();
+      break;
+
+    case Constants.actions.RESET_FIGHT:
+      store.character = Character.init();
+      store.combat = Combat.init();
+
+      Store.emitChange();
+      break;
+
     default:
   }
 });

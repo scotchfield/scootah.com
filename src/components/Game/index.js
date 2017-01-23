@@ -8,14 +8,37 @@ import CombatPanel from '../CombatPanel';
 import './style.css';
 
 class Game extends Component {
-  render() {
-    let character = Store.getCharacter();
-    let combat = Store.getCombat();
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      character: Store.getCharacter(),
+      combat: Store.getCombat()
+    };
+
+    this.update = this.update.bind(this);
+  }
+
+  componentDidMount = () => {
+    Store.addChangeListener(this.update);
+  }
+
+  componentWillUnmount = () => {
+    Store.removeChangeListener(this.update);
+  }
+
+  update() {
+    this.setState({
+      character: Store.getCharacter(),
+      combat: Store.getCombat()
+    });
+  }
+
+  render() {
     return (
       <div className='game navbar navbar-fixed-bottom'>
-        <CharacterPanel character={ character } />
-        <CombatPanel combat={ combat } />
+        <CharacterPanel character={ this.state.character } />
+        <CombatPanel combat={ this.state.combat } />
       </div>
     );
   }

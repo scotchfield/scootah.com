@@ -38,7 +38,8 @@ const Character = {
     }
 
     return character;
-  }
+  },
+  skills: skills
 };
 
 export default Character;
