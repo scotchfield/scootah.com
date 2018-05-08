@@ -23,7 +23,17 @@ class About extends Component {
 
           <h2>Experience</h2>
 
-          <h3>Full-Stack Software Developer, Six to Start <small>2016 - current</small></h3>
+          <h3>Software Developer, Khan Academy <small>2017 - current</small></h3>
+
+          <p>
+            <span className='tech-label'>javascript</span>
+            <span className='tech-label'>react</span>
+            <span className='tech-label'>python</span>
+          </p>
+
+          <p>Working with the most wonderful team in the world to provide a free, world‑class education for anyone, anywhere.</p>
+
+          <h3>Full-Stack Software Developer, Six to Start <small>2016 - 2017</small></h3>
 
           <p>
             <span className='tech-label'>javascript</span>
